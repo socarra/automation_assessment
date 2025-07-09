@@ -27,3 +27,7 @@ This project is set up for end-to-end testing using [Playwright](https://playwri
 
 ## Resources
 - [Playwright Documentation](https://playwright.dev/docs/intro)
+
+## Things to install
+npm install --save-dev @faker-js/faker
+npm install @axe-core/playwright

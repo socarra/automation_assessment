@@ -1,0 +1,35 @@
+import { test, expect } from '@playwright/test';
+// Log in to the admin page, create a room, and verify the room is created successfully
+test('test', async ({ page }) => {
+  await page.goto('https://automationintesting.online/admin');
+  await page.getByRole('textbox', { name: 'Username' }).click();
+  await page.getByRole('textbox', { name: 'Username' }).fill('admin');
+  await page.getByRole('textbox', { name: 'Password' }).click();
+  await page.getByRole('textbox', { name: 'Password' }).fill('password');
+  await page.getByRole('button', { name: 'Login' }).click();
+  await expect(page.locator('#navbarSupportedContent')).toContainText('Logout');
+  await expect(page.locator('#frontPageLink')).toContainText('Front Page');
+  await expect(page.locator('#navbarSupportedContent')).toContainText('Messages');
+  await expect(page.locator('#brandingLink')).toContainText('Branding');
+  await expect(page.locator('#reportLink')).toContainText('Report');
+  await expect(page.locator('#navbarSupportedContent')).toContainText('Rooms');
+  await page.getByText('101').click();
+  await expect(page.getByRole('heading')).toContainText('Room: 101');
+  await expect(page.getByRole('button', { name: 'Edit' })).toBeVisible();
+  await page.getByRole('link', { name: 'Rooms' }).click();
+  await page.getByTestId('roomName').click();
+  await page.getByTestId('roomName').fill('999');
+  await page.getByTestId('roomName').press('Tab');
+  await page.locator('#type').press('ArrowDown');
+  await page.locator('#type').press('Enter');
+  await page.locator('#accessible').selectOption('true');
+  await page.locator('#roomPrice').click();
+  await page.locator('#roomPrice').fill('165');
+  await page.getByRole('checkbox', { name: 'WiFi' }).check();
+  await page.getByRole('checkbox', { name: 'Refreshments' }).check();
+  await page.getByRole('checkbox', { name: 'TV' }).check();
+  await page.getByRole('checkbox', { name: 'Safe' }).check();
+  await page.getByRole('button', { name: 'Create' }).click();
+  await expect(page.locator('#room4')).toContainText('999');
+  await page.getByRole('button', { name: 'Logout' }).click();
+});
