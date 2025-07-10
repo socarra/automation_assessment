@@ -5,7 +5,7 @@ This is where the test plan will be written
 ## System overview
 
 The site under test is located at https://automationintesting.online/  and there is an admin portal at https://automationintesting.online/admin 
-Additionally there is an API collection at XXXX
+Additionally there is an API collection at https://www.postman.com/automation-in-testing/restful-booker-collections/collection/55eh7vh/restful-booker
 
 ### Website
 The public facing web site allows users to book or make enquiries for stays at the Shady Meadows B&B. 
@@ -30,8 +30,6 @@ The admin site allows
 ## Exploratory Testing
 Do first to get a handle for the application and what it needs to do - should inform later work 
 What have we found that might cause issues for autmation
-
-
 
 
 

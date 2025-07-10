@@ -1,12 +1,16 @@
 import { test, expect } from '@playwright/test';
 import * as dotenv from 'dotenv';
 dotenv.config();
+import { getMinuteSecondTimestamp } from '../utils/timestamp';
+
 
 async function loginIfNeeded(page) {
   const headingText = await page.getByRole('heading').textContent();
   if (headingText && headingText.includes('Login')) {
-    await page.getByRole('textbox', { name: 'Username' }).fill(process.env.ADMIN_USERNAME);
-    await page.getByRole('textbox', { name: 'Password' }).fill(process.env.ADMIN_PASSWORD);
+  //  await page.getByRole('textbox', { name: 'Username' }).fill(process.env.ADMIN_USERNAME);
+  //  await page.getByRole('textbox', { name: 'Password' }).fill(process.env.ADMIN_PASSWORD);
+    await page.getByRole('textbox', { name: 'Username' }).fill('admin');
+    await page.getByRole('textbox', { name: 'Password' }).fill('password');
     await page.getByRole('button', { name: 'Login' }).click();
   }
   await expect(page.locator('#navbarSupportedContent')).toContainText('Rooms');
@@ -35,8 +39,7 @@ test('admin can create and edit a room', async ({ page }) => {
   await loginIfNeeded(page);
 
   // Generate timestamp for uniqueness
-  const now = new Date();
-  const timestamp = `${now.getMinutes().toString().padStart(2, '0')}:${now.getSeconds().toString().padStart(2, '0')}`;
+  const timestamp = getMinuteSecondTimestamp();
   const roomName = `555 - ${timestamp}`;
 
   // Create a new room
