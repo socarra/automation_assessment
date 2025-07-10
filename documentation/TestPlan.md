@@ -34,6 +34,7 @@ What have we found that might cause issues for autmation
 
 
 ## Bug reporting
+- use GitHub as it's there for this :) - explain what's needed and how prioritsed. 
 
 ## Functional
 

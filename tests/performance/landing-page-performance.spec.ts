@@ -13,6 +13,6 @@ test('basic performance navigation', async ({ page }) => {
   const navigationTiming = JSON.parse(navigationTimingJson);
   console.log(navigationTiming);
 
-  // Write output to a file in the current woring directory
+  // Write output to a file in the current working directory
   fs.writeFileSync(`navigation-timing-${timestamp}.json`, navigationTimingJson, 'utf-8');
 });
