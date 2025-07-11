@@ -1,10 +1,11 @@
 import { test } from '@playwright/test';
 import * as fs from 'fs';
+import { BASE_URL } from '../utils/constants';
 import { getMinuteSecondTimestamp } from '../utils/timestamp';
 const timestamp = getMinuteSecondTimestamp();
 
 test('basic performance navigation', async ({ page }) => {
-  await page.goto('https://automationintesting.online/');
+  await page.goto(BASE_URL);
 
   const navigationTimingJson = await page.evaluate(() =>
     JSON.stringify(performance.getEntriesByType('navigation'))
