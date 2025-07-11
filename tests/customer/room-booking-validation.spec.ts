@@ -1,7 +1,8 @@
 import { test, expect } from '@playwright/test';
 import { faker } from '@faker-js/faker';
+import { BASE_URL } from '../utils/constants';
 
-const BASE_URL = 'https://automationintesting.online/';
+
 
 function getFutureDate(daysAhead: number): string {
   const date = new Date();

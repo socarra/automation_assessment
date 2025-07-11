@@ -6,7 +6,7 @@ test.describe('room detail', () => {
     await page.goto('https://automationintesting.online/reservation/1?checkin=2025-07-07&checkout=2025-07-08');
 
     const accessibilityScanResults = await new AxeBuilder({ page })
-    // .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
+    .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
     .analyze();
 
     expect(accessibilityScanResults.violations).toEqual([]);
