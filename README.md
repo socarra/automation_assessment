@@ -4,15 +4,13 @@ This project is set up for end-to-end testing using [Playwright](https://playwri
 
 ## Getting Started
 
-1. **Install dependencies:**
+1. **Install dependencies and Playwright:**
    ```sh
-   npm install
+   npm run setup
    ```
-2. **Install Playwright browsers:**
-   ```sh
-   npx playwright install
+
    ```
-3. **Run tests:**
+2. **Run tests:**
    ```sh
    npx playwright test
    ```
@@ -28,7 +26,7 @@ This project is set up for end-to-end testing using [Playwright](https://playwri
 ## Resources
 - [Playwright Documentation](https://playwright.dev/docs/intro)
 
-## Things to install
+## Setup script will install the following
 - npm install --save-dev @faker-js/faker
 - npm install @axe-core/playwright
 - npm install dotenv
