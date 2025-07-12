@@ -38,7 +38,9 @@ As well as the functionality mentioned above, we can reasonably have some expect
 
 
 ## Bug reporting
-- use GitHub as it's there for this :) - explain what's needed and how prioritsed. 
+A sample of bugs found have been documented in GitHub - in Issues.
+
+Bugs can be assigned a severity and a priority to help determine which need to be addressed before a product/service can be released, and which may be addressed later. The table below gives an overview of how we can label bugs.
 
 | **Severity**                                            | **Priority**                                  |
 |---------------------------------------------------------|-----------------------------------------------|
@@ -47,7 +49,7 @@ As well as the functionality mentioned above, we can reasonably have some expect
 | Medium: Affects usability or a key user action          | P3: Can be fixed later or in the next cycle   |
 | Low: Minor issue                                        | -                                             |
 
-Tagging of bugs to help determine the root cause - bugs can be a result of intergration issues, incorrect requirements as well as code, determing the root cause can help improve the standard of the product as a whole. 
+Additionaly, labelling bugs by their type can help in investigasting how they've been introduced.  Bugs can be a result of intergration issues, incorrect requirements as well as code, determing the root cause can help improve the standard of the product as a whole. 
 
 ## Functional
 

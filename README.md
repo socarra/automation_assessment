@@ -40,6 +40,7 @@ This project is set up for end-to-end testing using [Playwright](https://playwri
 
 ## Resources
 - [Playwright Documentation](https://playwright.dev/docs/intro)
+- [Faker Documentation](https://fakerjs.dev/)
 
 ## Setup script will install specific versions of the following
 - npm install --save-dev @faker-js/faker
