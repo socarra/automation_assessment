@@ -37,7 +37,8 @@ This project is set up for end-to-end testing using [Playwright](https://playwri
 - Ensure you are using Node.js v18 or higher for Playwright compatibility.
 - If you encounter errors during setup, upgrade your Node.js version.
 
-- The site is public accessible and used as testing ground - it resets to a default state every 10 minutes which may happen during a test execution. - Additionally others may add / delete / amend data causing errors when tests are executing. 
+- The site is public accessible and used as testing ground - it resets to a default state every 10 minutes which may happen during a test execution.
+- Additionally others may add / delete / amend data causing errors when tests are executing. 
 
 ## Resources
 - [Playwright Documentation](https://playwright.dev/docs/intro)
