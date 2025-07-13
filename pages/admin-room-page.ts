@@ -6,6 +6,7 @@ export class AdminRoomPage {
   async loginIfNeeded() {
     const headingText = await this.page.getByRole('heading').textContent();
     if (headingText && headingText.includes('Login')) {
+    // Uncomment the following lines to use environment variables for credentials  
     //  await page.getByRole('textbox', { name: 'Username' }).fill(process.env.ADMIN_USERNAME);
     //  await page.getByRole('textbox', { name: 'Password' }).fill(process.env.ADMIN_PASSWORD);
       await this.page.getByRole('textbox', { name: 'Username' }).fill('admin');

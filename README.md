@@ -14,6 +14,7 @@ This project is set up for end-to-end testing using [Playwright](https://playwri
    npx playwright test
    ```
 
+
 ## Project Structure
 - ` documentation` - Test plan
 - `pages/` -  Page Object Model classes

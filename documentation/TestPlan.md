@@ -35,7 +35,7 @@ Functional tests should be created to cover all of these paths.  We would want c
 
 
 ## Bug reporting
-For this project, bugs / defects encountered will be logged in the GitHub project - in Issues.
+For this project, bugs / defects encountered will be logged in the GitHub project - in [Issues](https://github.com/socarra/automation_assessment/issues). Comments will bee added to any issues which will cause an automated test to fail. 
 
 Bugs can be assigned a severity and a priority to help determine which need to be addressed before a product/service can be released, and which may be addressed later. The table below gives an overview of how we can label bugs.
 
