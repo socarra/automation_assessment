@@ -42,7 +42,7 @@ This project is set up for end-to-end testing using [Playwright](https://playwri
 - [Playwright Documentation](https://playwright.dev/docs/intro)
 - [Faker Documentation](https://fakerjs.dev/)
 
-## Setup script will install specific versions of the following
+## Setup script mentioned above will install specific versions of the following
 - npm install --save-dev @faker-js/faker
 - npm install @axe-core/playwright
 - npm install dotenv
