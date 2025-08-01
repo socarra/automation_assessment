@@ -1,13 +1,13 @@
 import { Page, expect } from '@playwright/test';
-// import { BASE_URL } from '../../utils/constants';
+import { BASE_URL } from '../tests/utils/constants';
 
 
 export class ContactFormPage {
   constructor(private page: Page) {}
 
   async goto() {
-    await this.page.goto('https://automationintesting.online/');
-    // await this.page.goto(BASE_URL);
+    await this.page.goto(BASE_URL);
+    // await this.page.goto('https://automationintesting.online/');
     await expect(this.page.locator('h1')).toContainText('Welcome to Shady Meadows B&B');
     await this.page.locator('#navbarNav').getByRole('link', { name: 'Contact' }).click();
     await expect(this.page.locator('#contact')).toContainText('Send Us a Message');

@@ -1,4 +1,5 @@
 import { expect, Page } from '@playwright/test';
+import { ADMIN_USERNAME, ADMIN_PASSWORD } from '../tests/utils/constants';
 
 export class AdminRoomPage {
   constructor(public page: Page) {}
@@ -6,11 +7,8 @@ export class AdminRoomPage {
   async loginIfNeeded() {
     const headingText = await this.page.getByRole('heading').textContent();
     if (headingText && headingText.includes('Login')) {
-    // Uncomment the following lines to use environment variables for credentials  
-    //  await page.getByRole('textbox', { name: 'Username' }).fill(process.env.ADMIN_USERNAME);
-    //  await page.getByRole('textbox', { name: 'Password' }).fill(process.env.ADMIN_PASSWORD);
-      await this.page.getByRole('textbox', { name: 'Username' }).fill('admin');
-      await this.page.getByRole('textbox', { name: 'Password' }).fill('password');
+      await this.page.getByRole('textbox', { name: 'Username' }).fill(ADMIN_USERNAME);
+      await this.page.getByRole('textbox', { name: 'Password' }).fill(ADMIN_PASSWORD);
       await this.page.getByRole('button', { name: 'Login' }).click();
     }
     await expect(this.page.locator('#navbarSupportedContent')).toContainText('Rooms');
