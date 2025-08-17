@@ -16,7 +16,7 @@ This project is set up for end-to-end testing using [Playwright](https://playwri
 
 
 ## Project Structure
-- ` documentation` - Test plan
+- `documentation` - Test plan
 - `pages/` -  Page Object Model classes
 - `tests/` - Test specifications - broken down by type
 - - `accessibility` 
